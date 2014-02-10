@@ -49,7 +49,7 @@ img {
 	border:0;
 }
 a {
-	color:#727272;
+	color:#990100;
 	text-decoration:underline;
 }
 a:hover {
@@ -131,7 +131,43 @@ button::-moz-focus-inner {
 .header .logo {
 	position:absolute;
 	left:0;
-	top:38px;
+	top:34px;
+	display:block;
+	width:279px;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-decoration:none;
+}
+.header .logo img {
+	position:absolute;
+	left:0;
+	top:3px;
+}
+.header .logo h3 {
+	position:absolute;
+	left:103px;
+	top:0;
+	width:176px;
+	color:#525252;
+	font-size:25px;
+	line-height:25px;
+	font-weight:normal;
+	white-space:nowrap;
+	text-transform:uppercase;
+	padding:0 0 5px;
+	margin:0;
+	border-bottom:2px solid #8c8c8c;
+}
+.header .logo:hover h3 {
+	border-bottom:2px solid transparent;
+}
+.header .logo p {
+	position:absolute;
+	left:103px;
+	top:36px;
+	color:#990000;
+	font-size:18px;
+	line-height:15px;
+	margin:0;
 }
 .header .call {
 	position:absolute;
@@ -234,7 +270,6 @@ button::-moz-focus-inner {
 	clear:both;
 	overflow:hidden;
 	width:960px;
-	text-align:center;
 	margin:0 auto;
 }
 .menu ul li {
@@ -268,10 +303,9 @@ button::-moz-focus-inner {
 	font-size:20px;
 	line-height:24px;
 	font-family:'PT Sans Narrow', sans-serif;
-	margin:0 -2px 0 -1px;
 }
 .submenu ul li:first-child {
-	margin-left:-1px !important;
+	margin-left:0 !important;
 }
 .submenu ul li a {
 	display:block;
@@ -434,21 +468,19 @@ button::-moz-focus-inner {
 }
 .breadcrumbs li {
 	float:left;
-	color:#868686;	
+	color:#868686 !important;	
 	font-size:15px;
-	line-height:18px;
+	line-height:18px !important;
 	font-family:'PT Sans Narrow', sans-serif;
-	padding:0 0 0 15px;
-	margin:0 0 0 5px;
-	background:url('./images/breadcrumbs_li.png') no-repeat left 7px;
+	text-indent:0 !important;
+	padding:0 0 0 15px !important;
+	margin:0 0 0 5px !important;
+	background:url('./images/breadcrumbs_li.png') no-repeat left 7px !important;
 }
 .breadcrumbs li:first-child {
-	padding-left:0;
-	margin-left:0;
-	background:none;
-}
-.breadcrumbs li span {
-	text-decoration:underline;
+	padding-left:0 !important;
+	margin-left:0 !important;
+	background:none !important;
 }
 .breadcrumbs li a {
 	color:#cc807f;	
@@ -461,7 +493,7 @@ button::-moz-focus-inner {
 	font-family:'PT Sans Narrow', sans-serif;
 	text-transform:uppercase;
 	padding:0;
-	margin:0 0 19px;
+	margin:0 0 28px;
 }
 .lb {
 	float:left;
@@ -483,10 +515,13 @@ button::-moz-focus-inner {
 	color:#525252;
 	text-decoration:none;
 }
+.lb > .nav > li.current > a {
+	font-weight:bold;
+}
 .lb > .nav > li > a:hover {
 	text-decoration:underline;
 }
-.lb > .nav > li.sub > a:hover {
+.lb > .nav > li.sub > a {
 	text-decoration:none;
 	border-bottom:1px dashed #525252;
 }
@@ -534,15 +569,110 @@ button::-moz-focus-inner {
 .lb .basket a:hover span {
 	text-decoration:none;
 }
-
+.lb .useful {
+	font-family:'PT Sans Narrow', sans-serif;
+	padding:17px 26px 24px 14px;
+	margin:0 0 33px;
+	background:url('./images/basket_bg.png') repeat;
+}
+.lb .useful h3 {
+	color:#990100;
+	font-size:18px;
+	line-height:22px;
+	font-weight:normal;
+	text-transform:uppercase;
+	padding:0;
+	margin:0 0 20px;
+}
+.lb .useful > div {
+	margin:0 0 3px;
+}
+.lb .useful > div p {
+	color:#525252;
+	font-size:15px;
+	line-height:22px;
+	margin:0 0 6px;
+}
+.lb .useful > div p a {
+	color:#990100;
+}
+.lb .useful > div.active p a {
+	color:#525252;
+}
+.lb .useful > div > div {
+	display:none;
+	margin:3px 0 12px;
+}
+.lb .useful > div.active > div {
+	display:block;
+}
 .rb {
 	float:right;
 	width:700px;
+	margin:0 0 27px;
+}
+.rb p {
+	color:#525252;
+	font-size:15px;
+	line-height:22px;
+	font-family:'PT Sans Narrow', sans-serif;
+	margin:0 0 22px;
+}
+.rb h6 {
+	color:#525252;
+	font-size:15px;
+	line-height:22px;
+	font-weight:normal;
+	font-family:'PT Sans Narrow', sans-serif;
+	margin:0;
+}
+.rb > p > span {
+	color:#990100;
+	font-size:18px;
+	text-transform:uppercase;
+}
+.rb > p > strong {
+	font-size:18px;
+}
+.rb > h2 {
+	color:#525252;
+	font-size:18px;
+	line-height:22px;
+	font-weight:normal;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-transform:uppercase;
+	padding:0;
+	margin:0 0 22px;
+}
+.rb > ul {
+	margin:0 0 22px;
+}
+.rb > ul > li {
+	color:#525252;
+	font-size:15px;
+	line-height:22px;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-indent:25px;
+	margin:0;
+	background:url('./images/ul_li.png') no-repeat 11px 10px;
+}
+.rb > ul.list > li {
+	text-indent:0;
+	background:none;
+}
+.rb .training h6 {
+	margin:0 0 22px;
+}
+.rb .training > div {
+	margin:0 0 22px;
+}
+.rb .training > div p {
+	margin:0;
 }
 .shop {
 	width:100%;
 	font-family:'PT Sans Narrow', sans-serif;
-	margin:0 0 33px;
+	margin:-9px 0 33px;
 }
 .shop th {
 	color:#525252;
