@@ -548,25 +548,25 @@ button::-moz-focus-inner {
 .lb > .nav > li > ul > li > a:hover {
 	text-decoration:underline;
 }
-.lb .basket {
+.lb p.basket {
 	font-size:15px;
 	line-height:18px;
 	font-family:'PT Sans Narrow', sans-serif;
 	margin:0 0 33px;
 	background:url('./images/basket_bg.png') repeat;
 }
-.lb .basket a {
+.lb p.basket a {
 	display:block;
 	color:#990100;
 	text-decoration:none;
 	padding:17px 14px 25px;
 }
-.lb .basket a span {
+.lb p.basket a span {
 	display:block;
 	margin:0 0 7px;
 	text-decoration:underline;
 }
-.lb .basket a:hover span {
+.lb p.basket a:hover span {
 	text-decoration:none;
 }
 .lb .useful {
@@ -625,6 +625,17 @@ button::-moz-focus-inner {
 	font-weight:normal;
 	font-family:'PT Sans Narrow', sans-serif;
 	margin:0;
+}
+.rb h6.request {
+	margin:0 0 22px;
+}
+.rb h6.request a {
+	color:#525252;
+	text-decoration:none;
+	border-bottom:1px dashed #525252;
+}
+.rb h6.request a:hover {
+	border-bottom:1px dashed transparent;
 }
 .rb > p > span {
 	color:#990100;
@@ -732,6 +743,184 @@ button::-moz-focus-inner {
 }
 .shop td button:active {
 	background-position:0 -38px;
+}
+.form {
+	clear:both;
+	overflow:hidden;
+	width:550px;
+	margin:-3px 0 23px;
+}
+.form p {
+	clear:both;
+	overflow:hidden;
+	color:#525252;
+	font-size:18px;
+	line-height:22px;
+	font-family:'PT Sans Narrow';
+	text-align:right;
+	margin:0 0 15px;
+}
+.form p span {
+	float:left;
+	display:block;
+	width:136px;
+	text-align:left;
+	text-transform:uppercase;
+	padding:2px 0 1px;
+}
+.form p span em {
+	color:#990100;
+	font-style:normal;
+}
+.form p input, .form p textarea {
+	position:relative;
+	width:386px;
+	color:#525252;
+	font-size:18px;
+	font-family:'PT Sans Narrow', sans-serif;
+	padding:0 7px;
+	background:#ffffff;
+	border:1px solid #d8d8d8;
+	border-top:1px solid #e0e0e0;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	box-shadow:inset 0 1px 1px #ebebeb;
+	behavior:url('./pie.htc');
+}
+.form p textarea {
+	min-height:93px;
+	margin:0 0 -5px;
+	resize:vertical;
+}
+.form > div {
+	clear:both;
+	overflow:hidden;
+	margin:30px 0 10px;
+}
+.form button {
+	float:right;
+	color:#ffffff;
+	font-size:20px;
+	line-height:23px;
+	font-weight:bold;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-transform:uppercase;
+	cursor:pointer;
+	padding:9px 63px 8px 62px;
+	margin:0;
+	background:#525252;
+	border:7px solid #8e8e8e;
+}
+.form button:hover {
+	border:7px solid #9c9c9c;
+}
+.form button:active {
+	border:7px solid #818181;
+}
+div.basket {
+	margin:-9px 0 23px;
+}
+div.basket table {
+	width:100%;
+	font-family:'PT Sans Narrow', sans-serif;
+}
+div.basket table th {
+	color:#525252;
+	font-size:18px;
+	line-height:22px;
+	font-weight:normal;
+	text-align:left;
+	white-space:nowrap;
+	padding:9px 0 9px 12px;
+	background:url('./images/shop_th.png') repeat-x bottom;
+}
+div.basket table .title {
+	width:76%;
+}
+div.basket table .price {
+	width:10%;
+}
+div.basket table .quantity {
+	width:14%;
+}
+div.basket table td {
+	color:#525252;
+	font-size:15px;
+	line-height:18px;
+	vertical-align:top;
+	padding:11px 0 11px 12px;
+	background:#ffffff;
+}
+div.basket table tr:nth-child(even) td {
+	background:#f5e5e5;
+}
+div.basket table td input {
+	width:55px;
+	color:#525252;
+	font-size:15px;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-align:center;
+	padding:1px 4px;
+	margin:-3px 0 -2px;
+	border:1px solid #d6d2d2;
+}
+div.basket table td button.remove {
+	float:right;
+	width:12px;
+	height:12px;
+	cursor:pointer;
+	margin:2px 7px 0 0;
+	background:url('./images/basket_remove.png') no-repeat left top;
+}
+div.basket table td button.remove:hover {
+	background-position:0 -12px;
+}
+div.basket h2 {
+	color:#990100;
+	font-size:20px;
+	line-height:24px;
+	font-weight:normal;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-align:right;
+	padding:0;
+	margin:0 0 18px;
+}
+div.basket > div {
+	clear:both;
+	overflow:hidden;
+	margin:0 0 30px;
+}
+div.basket > div > div {
+	float:right;
+}
+div.basket > div button {
+	float:right;
+	color:#ffffff;
+	font-size:20px;
+	line-height:23px;
+	font-weight:bold;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-transform:uppercase;
+	cursor:pointer;
+	padding:9px 38px 8px 38px;
+	margin:0;
+	background:#525252;
+	border:7px solid #8e8e8e;
+}
+div.basket > div button:hover {
+	border:7px solid #9c9c9c;
+}
+div.basket > div button:active {
+	border:7px solid #818181;
+}
+div.basket > div p {
+	float:left;
+	font-size:20px;
+	line-height:23px;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-transform:uppercase;
+	margin:16px 52px 15px 0; 
 }
 
 /* Footer */
@@ -877,7 +1066,7 @@ div.enter p:first-child a span {
 div.enter p:last-child a span {
 	border-bottom-width:0;
 }
-div.enter .close, div.popup .close {
+div.enter .close, div.popup .close, div.request .close {
 	position:absolute;
 	right:21px;
 	top:21px;
@@ -970,4 +1159,98 @@ div.popup button:hover span {
 }
 div.popup button:active span {
 	background:#8b0100;
+}
+div.request {
+	display:none;
+	position:fixed;
+	left:50%;
+	top:50%;
+	z-index:1010;
+	padding:7px;
+	margin:-268px 0 0 -317px;
+	background:url('./images/popup_bg.png') repeat;
+}
+div.request > div {
+	position:relative;
+	width:500px;
+	padding:53px 60px 45px 60px;
+	background:#ffffff;
+}
+div.request h3 {
+	color:#990100;
+	font-size:20px;
+	line-height:22px;
+	font-weight:normal;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-transform:uppercase;
+	padding:0;
+	margin:0 0 26px;
+}
+div.request p {
+	clear:both;
+	overflow:hidden;
+	color:#525252;
+	font-size:18px;
+	line-height:22px;
+	font-family:'PT Sans Narrow';
+	text-align:right;
+	margin:0 0 15px;
+}
+div.request p span {
+	float:left;
+	display:block;
+	width:136px;
+	text-align:left;
+	text-transform:uppercase;
+	padding:2px 0 1px;
+}
+div.request p span em {
+	color:#990100;
+	font-style:normal;
+}
+div.request p input, div.request p textarea {
+	position:relative;
+	width:336px;
+	color:#525252;
+	font-size:18px;
+	font-family:'PT Sans Narrow', sans-serif;
+	padding:0 7px;
+	background:#ffffff;
+	border:1px solid #d8d8d8;
+	border-top:1px solid #e0e0e0;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	box-shadow:inset 0 1px 1px #ebebeb;
+	behavior:url('./pie.htc');
+}
+div.request p textarea {
+	min-height:93px;
+	margin:0 0 -5px;
+	resize:vertical;
+}
+div.request > div > div {
+	clear:both;
+	overflow:hidden;
+	margin:30px 0 15px;
+}
+div.request button {
+	float:right;
+	color:#ffffff;
+	font-size:20px;
+	line-height:23px;
+	font-weight:bold;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-transform:uppercase;
+	cursor:pointer;
+	padding:9px 63px 8px 62px;
+	margin:0;
+	background:#525252;
+	border:7px solid #8e8e8e;
+}
+div.request button:hover {
+	border:7px solid #9c9c9c;
+}
+div.request button:active {
+	border:7px solid #818181;
 }

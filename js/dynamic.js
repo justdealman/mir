@@ -51,7 +51,7 @@ $(document).ready(function() {
 			$(this).stop(true, true).animate({'opacity': '0.5', 'filter': 'alpha(opacity=50)'}, 500);
 		}
 	);
-	$('div.enter, div.popup').append('<span class="close"></span>');
+	$('div.enter, div.popup, div.request').append('<span class="close"></span>');
 	$('span.close').click(function() {
 		$(this).parent().fadeOut(150);
 		$('.fade').fadeOut(150);
@@ -59,6 +59,10 @@ $(document).ready(function() {
 	})
 	$('.footer button.enter').click(function() {
 		$('.fade, div.enter').fadeIn(150);
+		return false;
+	});
+	$('.rb h6.request a').click(function() {
+		$('.fade, div.request').fadeIn(150);
 		return false;
 	});
 	$('div.enter p a').click(function() {
@@ -69,7 +73,7 @@ $(document).ready(function() {
 	});
 	$(this).keydown(function(eventObject){
 		if (eventObject.which == 27)
-		$('div.popup, div.enter, .fade').fadeOut(150);
+		$('div.popup, div.enter, div.request, .fade').fadeOut(150);
 	});
 	$('input, textarea').each(function () {
 		$(this).data('holder',$(this).attr('placeholder'));
@@ -88,4 +92,6 @@ $(document).ready(function() {
 		$(this).parent().parent().toggleClass('active');
 		return false;
 	});
+	$('.shop tr:nth-child(even) td, div.basket table tr:nth-child(even) td').css({'background': '#f5e5e5'});
+	$('div.enter p:last-child a span').css({'border-bottom-width': '0'});
 });
