@@ -16,6 +16,7 @@
 /* Default */
 
 html {
+	min-width:1000px;
 	height:100%;
 }
 body {
@@ -219,10 +220,7 @@ button::-moz-focus-inner {
 	width:22px;
 	height:18px;
 	margin:0 14px 0 13px;
-}
-.header .favicon li a {
 	opacity:0.5;
-	filter:alpha(opacity=50);
 }
 .header .favicon li img {
 	position:absolute;
@@ -390,14 +388,14 @@ button::-moz-focus-inner {
 	position:absolute;
 	left:0;
 	bottom:0;
-	display:table;
 	width:140px;
 	height:38px;
 	padding:7px 20px 5px;
 	background:url('./images/service_div_div_div.png') repeat;
 }
 .service > div > div > div p {
-	display:table-cell;
+	overflow:hidden;
+	max-height:38px;
 	color:#ffffff;
 	font-size:20px;
 	line-height:19px;

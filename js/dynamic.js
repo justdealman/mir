@@ -8,7 +8,7 @@
 	$('.menu ul li a').css({'padding-left': free+'px', 'padding-right': free+'px'});
 	var pleft = Math.floor((960-chars-(free*size))/2)+free;
 	$('.menu ul li:first-child a').css({'padding-left': pleft+'px'});
-	var pright = (960-chars-(free*size)+free-pleft)+free;
+	var pright = (960-chars-(free*size)+free-pleft)+free-1;
 	$('.menu ul li:last-child a').css({'padding-right': pright+'px'});
 	var chars2 = 0;
 	$('.submenu ul li').each(function() {
@@ -18,21 +18,30 @@
 	$('.submenu ul li a').css({'padding-left': pleft+'px', 'padding-right': pleft+'px'});
 	var submargin = Math.floor((960 - chars2 - ((size2+1)*2*pleft)) / size2);
 	$('.submenu ul li').css({'margin-left': submargin+'px'});
-	var lastmargin = submargin + (960 - chars2 - submargin*size2 - (size2+1)*2*pleft);
+	var lastmargin = submargin + (960 - chars2 - submargin*size2 - (size2+1)*2*pleft)-1;
 	$('.submenu ul li:last-child').css({'margin-left': lastmargin+'px'});
 });
 function float() {
-	var wrapper = $('.wrapper').height();
-	var consultant = $('.consultant').position().top;
-	var difference = wrapper-consultant;
-	if (difference > 137) {
-		$('.consultant').stop(true, true).delay(500).animate({'bottom': '0'}, 500, 'easeOutQuint');
+	var difference = $('.wrapper').height()-$('body').height()-$(window).scrollTop();
+	if (difference > 85) {
+		$('.consultant').css({'bottom': '0'});
 	}
 	else {
-		$('.consultant').stop(true, true).delay(500).animate({'bottom': '85px'}, 500, 'easeOutQuint');
+		$('.consultant').css({'bottom': 85-difference+'px'});
+	}
+	var width = $(window).width();
+	if (width < 1000) {
+		var mright =  -1000+(width / 2)+$(window).scrollLeft()+20;
+		$('.consultant').css({'margin-right': mright+'px'});
+	}
+	else {
+		$('.consultant').css({'margin-right': '-480px'});
 	}
 }
 $(window).scroll(function(){
+	float();
+});
+$(window).resize(function(){
 	float();
 });
 $(document).ready(function() {
@@ -43,14 +52,18 @@ $(document).ready(function() {
 		max = h > max ? h : max;
 	});
 	$('.service > div').height(max);
-	$('.header .favicon li a').hover(
+	$('.header .favicon li').hover(
 		function() {
-			$(this).stop(true, true).animate({'opacity': '1', 'filter': 'alpha(opacity=100)'}, 500);
+			$(this).stop(true, true).animate({'opacity': '1'}, 500);
 		},
 		function() {
-			$(this).stop(true, true).animate({'opacity': '0.5', 'filter': 'alpha(opacity=50)'}, 500);
+			$(this).stop(true, true).animate({'opacity': '0.5'}, 500);
 		}
 	);
+	$('.service > div > div > div').each(function() {
+		var sp = (38-$(this).children('p').height())/2;
+		$(this).children('p').css({'margin-top': sp+'px'});
+	});
 	$('div.enter, div.popup, div.request').append('<span class="close"></span>');
 	$('span.close').click(function() {
 		$(this).parent().fadeOut(150);
