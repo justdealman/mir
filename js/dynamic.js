@@ -44,8 +44,10 @@ $(window).scroll(function(){
 $(window).resize(function(){
 	float();
 });
-$(document).ready(function() {
+$(window).load(function(){
 	float();
+});
+$(document).ready(function() {
 	var max = -1;
 	$('.service > div').each(function() {
 		var h = $(this).height(); 
@@ -105,6 +107,19 @@ $(document).ready(function() {
 		$(this).parent().parent().toggleClass('active');
 		return false;
 	});
-	$('.shop tr:nth-child(even) td, div.basket table tr:nth-child(even) td').css({'background': '#f5e5e5'});
+	$('.minus').click(function () {
+		var $input = $(this).parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 0 ? 0 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+	$('.plus').click(function () {
+		var $input = $(this).parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
 	$('div.enter p:last-child a span').css({'border-bottom-width': '0'});
 });
