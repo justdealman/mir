@@ -1106,6 +1106,55 @@ div.basket > div p {
 .consultant:active {
 	border:7px solid #ac5251;
 }
+.map {
+	margin:33px 0 37px;
+	border:7px solid #8e8e8e;
+}
+.map img {
+	margin:0 0 -5px;
+}
+table.contacts {
+	width:100%;
+	margin:0 0 34px;
+}
+table.contacts th {
+	color:#990100;
+	font-size:18px;
+	line-height:22px;
+	text-align:left;
+	font-weight:normal;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-transform:uppercase;
+	padding:8px 20px 9px 10px;
+}
+table.contacts td {
+	color:#525252;
+	font-size:18px;
+	line-height:20px;
+	font-family:'PT Sans Narrow', sans-serif;
+	padding:8px 20px 9px 10px;
+}
+table.contacts td em {
+	display:block;
+	color:#8e8e8e;
+	font-size:15px;
+	line-height:14px;
+}
+table.contacts td span {
+	display:block;
+}
+table.contacts .title {
+	width:20%;
+}
+table.contacts .name {
+	width:38%;
+}
+table.contacts .data {
+	width:42%;
+}
+table.contacts tr:nth-child(2n+1) td, table.contacts tr:nth-child(2n+1) th {
+	background:#f5e5e5;
+}
 
 /* Popup */
 
