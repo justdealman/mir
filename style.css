@@ -1107,11 +1107,82 @@ div.basket > div p {
 	border:7px solid #ac5251;
 }
 .map {
+	clear:both;
+	overflow:hidden;
 	margin:33px 0 37px;
+}
+.map .view {
+	float:left;
+	width:616px;
 	border:7px solid #8e8e8e;
 }
 .map img {
 	margin:0 0 -5px;
+}
+.map .ask {
+	float:right;
+	width:292px;
+	margin:-5px 0 0;
+}
+.map .ask h3 {
+	color:#990100;
+	font-size:20px;
+	line-height:24px;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-transform:uppercase;
+	padding:0;
+	margin:0 0 25px 80px;
+}
+.map .ask p {
+	clear:both;
+	overflow:hidden;
+	color:#525252;
+	font-size:15px;
+	line-height:18px;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-align:right;
+	margin:0 0 15px;
+}
+.map .ask p span {
+	float:left;
+	width:50px;
+	text-align:left;
+	padding:4px 0 3px;
+}
+.map .ask p span em {
+	color:#990100;
+	font-style:normal;
+}
+.map .ask p input, .map .ask p textarea {
+	width:200px;
+	color:#525252;
+	font-size:15px;
+	padding:2px 5px;
+	font-family:'PT Sans Narrow', sans-serif;
+	border:1px solid #cccccc;
+}
+.map .ask p textarea {
+	min-height:166px;
+	resize:vertical;
+}
+.map .ask button.submit {
+	color:#ffffff;
+	font-size:18px;
+	line-height:21px;
+	font-weight:bold;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-transform:uppercase;
+	cursor:pointer;
+	padding:9px 50px 8px;
+	margin:12px 0 0 80px;
+	background:#525252;
+	border:7px solid #8e8e8e;
+}
+.map .ask button.submit:hover {
+	border:7px solid #9c9c9c;
+}
+.map .ask button.submit:active {
+	border:7px solid #818181;
 }
 table.contacts {
 	width:100%;
