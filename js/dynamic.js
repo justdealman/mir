@@ -66,7 +66,7 @@ $(document).ready(function() {
 		var sp = (38-$(this).children('p').height())/2;
 		$(this).children('p').css({'margin-top': sp+'px'});
 	});
-	$('div.enter, div.popup, div.request').append('<span class="close"></span>');
+	$('div.enter, div.popup, div.request, div.callme').append('<span class="close"></span>');
 	$('span.close').click(function() {
 		$(this).parent().fadeOut(150);
 		$('.fade').fadeOut(150);
@@ -122,4 +122,10 @@ $(document).ready(function() {
 		return false;
 	});
 	$('div.enter p:last-child a span').css({'border-bottom-width': '0'});
+	
+	$('select').uniform();
+	$('.header .call p a').click(function() {
+		$('.fade, div.callme').fadeIn(150);
+		return false;
+	});
 });
