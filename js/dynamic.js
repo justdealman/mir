@@ -128,4 +128,14 @@ $(document).ready(function() {
 		$('.fade, div.callme').fadeIn(150);
 		return false;
 	});
+	
+	$('.slider > div').slides({
+		generatePagination: true,
+		generateNextPrev: false,
+		container: 'container',
+		effect: 'fade',
+		fadeSpeed: 250,
+		play: 7500,
+		pause: 2500
+	});
 });

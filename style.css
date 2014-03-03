@@ -360,6 +360,84 @@ button::-moz-focus-inner {
 	text-transform:uppercase;
 	margin:23px 0 0;
 }
+.slider {
+	position:relative;
+	overflow:hidden;
+	margin:15px 0 42px;
+	background:url('./images/intro_bg.png') repeat;
+}
+.slider > div {
+	position:relative;
+	width:960px;
+	margin:0 auto;
+	height:350px;
+}
+.slider > div .container, .slider > div .container > div > div {
+	position:relative;
+	clear:both;
+	overflow:hidden;
+	width:960px;
+	height:350px;
+	text-align:right;
+}
+.slider > div .container > div > div > img {
+	max-width:480px;
+}
+.slider > div .container > div > div  > div {
+	position:absolute;
+	left:0;
+	top:90px;
+	width:410px;
+	text-align:left;
+	padding:0 0 20px;
+	background:url('./images/intro_div_div.png') repeat-x bottom;
+}
+.slider > div .container > div > div  > div p {
+	color:#525252;
+	font-size:18px;
+	line-height:22px;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-transform:uppercase;
+	margin:0;
+}
+.slider > div .container > div > div  > div h3 {
+	color:#525252;
+	font-size:30px;
+	line-height:28px;
+	font-weight:normal;
+	font-family:'PT Sans Narrow', sans-serif;
+	text-transform:uppercase;
+	margin:23px 0 0;
+}
+.slider > div .pagination {
+	position:absolute;
+	left:0;
+	top:324px;
+	width:410px;
+	text-align:center;
+	margin:0 !important;
+}
+.slider > div .pagination li {
+	display:inline-block;
+	margin:0 3px;
+}
+.slider > div .pagination li a {
+	position:relative;
+	display:block;
+	width:12px;
+	height:12px;
+	margin:0 !important;
+	background:#ffffff;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	behavior:url('./pie.htc');
+}
+.slider > div .pagination li.current a {
+	opacity:0.75;
+	filter:alpha(opacity=75);
+}
+
 .service {
 	clear:both;
 	overflow:hidden;
