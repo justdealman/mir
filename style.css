@@ -386,10 +386,35 @@ button::-moz-focus-inner {
 	height:350px;
 	text-align:right;
 }
-.slider > div .container > div > div > img {
+.slider > div .container > div > div > div.picture {
+	position:absolute;
+	right:0;
+	top:0;
+	max-width:480px;
+	height:350px;
+}
+.slider > div .container > div > div > div.picture img {
 	max-width:480px;
 }
-.slider > div .container > div > div  > div {
+.slider > div .container > div > div > div.picture .lshadow {
+	position:absolute;
+	left:0;
+	top:0;
+	display:block;
+	width:34px;
+	height:350px;
+	background:url('./images/slide_fade.png') repeat;
+}
+.slider > div .container > div > div > div.picture .rshadow {
+	position:absolute;
+	right:0;
+	top:0;
+	display:block;
+	width:34px;
+	height:350px;
+	background:url('./images/slide_fade.png') repeat;
+}
+.slider > div .container > div > div  > div.information {
 	position:absolute;
 	left:0;
 	top:90px;
@@ -398,7 +423,7 @@ button::-moz-focus-inner {
 	padding:0 0 20px;
 	background:url('./images/intro_div_div.png') repeat-x bottom;
 }
-.slider > div .container > div > div  > div p {
+.slider > div .container > div > div  > div.information p {
 	color:#525252;
 	font-size:18px;
 	line-height:22px;
@@ -406,7 +431,7 @@ button::-moz-focus-inner {
 	text-transform:uppercase;
 	margin:0;
 }
-.slider > div .container > div > div  > div h3 {
+.slider > div .container > div > div  > div.information h3 {
 	color:#525252;
 	font-size:30px;
 	line-height:28px;

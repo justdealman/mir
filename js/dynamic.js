@@ -138,4 +138,6 @@ $(document).ready(function() {
 		play: 7500,
 		pause: 2500
 	});
+	
+	$('.slider > div .container > div > div > div.picture').append('<span class="lshadow"></span><span class="rshadow"></span>');
 });
